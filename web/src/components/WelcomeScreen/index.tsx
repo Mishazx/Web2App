@@ -3,7 +3,6 @@ import GradientOverlay from './GradientOverlay';
 import AwardBadge from './AwardBadge';
 import MainTitle from './MainTitle';
 import SubTitle from './SubTitle';
-import ContinueButton from '../Common/ContinueButton';
 import './styles.css';
 import { useNavigate } from 'react-router-dom';
 
