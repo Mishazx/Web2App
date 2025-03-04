@@ -9,7 +9,7 @@ interface ContainerQuizProps {
   options?: string[];
   description?: string;
   buttonText?: string;
-  handleNext: () => void;
+  handleNext: (selectedOption?: string) => void;
   progress: number;
 }
 
@@ -21,6 +21,14 @@ const ContainerQuiz = ({
   handleNext,
   progress
 }: ContainerQuizProps) => {
+  const handleOptionClick = (option: string) => {
+    handleNext(option);
+  };
+
+  const handleContinue = () => {
+    handleNext();
+  };
+
   return (
     <Background progress={progress}>
 
@@ -28,7 +36,7 @@ const ContainerQuiz = ({
 
       {options && <div className="quiz-buttons">
         {options.map((option, index) => (
-          <Button key={index} text={option} onClick={handleNext} style={{ marginBottom: 10 }} />
+          <Button key={index} text={option} onClick={() => handleOptionClick(option)} style={{ marginBottom: 10 }} />
         ))}
       </div>
       }
@@ -36,7 +44,7 @@ const ContainerQuiz = ({
       <DescriptionQuiz description={description} />
 
       {(!options || buttonText) && (
-        <ContinueButton handleClick={handleNext} buttonText={buttonText} />
+        <ContinueButton handleClick={handleContinue} buttonText={buttonText} />
       )}
 
     </Background>

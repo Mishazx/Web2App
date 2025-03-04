@@ -1,7 +1,7 @@
 import { useParams, useNavigate } from 'react-router-dom';
 import ContainerQuiz from "./ContainerQuiz";
 
-const questions = [
+export const questions = [
   { 
     id: 1, 
     type: "question",
@@ -113,11 +113,24 @@ const Quiz = () => {
   
   const progressPercent = Math.round((questionId / (questions.length + 1)) * 100);
   
-  const handleNext = () => {
-    if (questionId < questions.length) {
-      navigate(`/quiz/${questionId + 1}`);
+  const handleNext = (selectedOption?: string) => {
+    if (question.type === "question" && selectedOption) {
+      // Сохраняем ответ в URL
+      const searchParams = new URLSearchParams(window.location.search);
+      searchParams.set(`q${questionId}`, selectedOption);
+      
+      if (questionId < questions.length) {
+        navigate(`/quiz/${questionId + 1}?${searchParams.toString()}`);
+      } else {
+        navigate(`/results?${searchParams.toString()}`);
+      }
     } else {
-      navigate("/results");
+      // Для info-экранов просто переходим дальше с существующими параметрами
+      if (questionId < questions.length) {
+        navigate(`/quiz/${questionId + 1}${window.location.search}`);
+      } else {
+        navigate(`/results${window.location.search}`);
+      }
     }
   };
 
@@ -136,7 +149,7 @@ const Quiz = () => {
           question={question.text}
           description={question.description}
           buttonText={question.buttonText} 
-          handleNext={handleNext}
+          handleNext={() => handleNext()}
           progress={progressPercent}
         />
       )}
