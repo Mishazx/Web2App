@@ -1,0 +1,80 @@
+.quiz-container {
+  display: flex;
+  flex-direction: column;
+  background: "#FFFFFF";
+}
+
+.quiz-inner {
+  height: 946px;
+  align-self: stretch;
+  background: "#000000";
+}
+
+.quiz-content {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  margin: 18px;
+  padding-bottom: 253px;
+  margin-top: 49px;
+  margin-bottom: 31px;
+}
+
+.quiz-progress {
+  align-self: stretch;
+  margin-bottom: 40px;
+}
+
+.progress-bar-background {
+  height: 10px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.progress-bar-fill {
+  position: absolute;
+  height: 100%;
+  background: #FFFFFF;
+  border-radius: 5px;
+  top: 0;
+  left: 0;
+  transition: width 0.3s ease-in-out;
+}
+
+.progress-steps {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 14px;
+  margin-top: 8px;
+}
+
+.progress-indicator {
+  display: flex;
+  justify-content: space-between;
+}
+
+.question {
+  color: #FFFFFF;
+  font-size: 31px;
+  font-weight: bold;
+  margin-bottom: 193px;
+}
+
+.quiz-buttons {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+}
+
+.quiz-description {
+  color: #FFFFFF;
+  font-size: 18px;
+  line-height: 1.6;
+  text-align: center;
+  margin-bottom: 40px;
+  padding: 0 10px;
+}

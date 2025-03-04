@@ -1,0 +1,120 @@
+.welcome-screen {
+  max-width: 430px;
+  max-height: 932px;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.welcome-background-image {
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  height: auto;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.background-phone-image {
+  width: 350px;
+  object-fit: contain;
+}
+
+.welcome-gradient-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(0,0,0,0) 30%, rgba(0,0,0,0.9) 40%, #000000 85%);
+  z-index: 2;
+}
+
+.welcome-award-badge {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 100px;
+  position: relative;
+}
+
+.award-badge-content {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.award-badge-left {
+  height: 95px;
+  margin-right: 10px;
+}
+
+.award-badge-right {
+  height: 95px;
+  margin-left: 10px;
+}
+
+.award-badge-text-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.award-badge-title {
+  font-family: "San Francisco Pro", sans-serif;
+  font-weight: 540;
+  font-size: 24px;
+  line-height: 28.64px;
+  letter-spacing: 0%;
+  text-align: center;
+
+}
+
+.award-badge-subtitle {
+  font-family: "San Francisco Pro", sans-serif;
+  font-weight: 270;
+  font-size: 15px;
+  line-height: 17.9px;
+  letter-spacing: 0%;
+  text-align: center;  
+}
+
+.welcome-main-title {
+  text-align: center;
+  margin-bottom: 100px;
+  color: white;
+  font-size: 27px;
+  font-weight: bold;
+  line-height: 1.2;
+  font-family: "San Francisco Pro", sans-serif;
+}
+
+.welcome-sub-title {
+  text-align: center;
+  margin-bottom: 50px;
+  color: white;
+  font-size: 17px;
+  line-height: 1.4;
+  padding-left: 15px;
+  padding-right: 15px;
+  font-family: "San Francisco Pro", sans-serif;
+}
+
+.continue-button {
+  width: 100%;
+  padding: 20px;
+  background: #FFFFFF;
+  color: #000000;
+  border: none;
+  border-radius: 32px;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: "San Francisco Pro", sans-serif;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.continue-button:hover {
+  opacity: 0.9;
+} 
