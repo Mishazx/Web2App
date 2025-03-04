@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import WelcomeScreen from './components/WelcomeScreen';
 import Quiz from './components/Quiz';
-import ResultsScreen from './components/ResultScreen';
+import ResultsScreen from './components/ResultsScreen';
 import './App.css';
 
 function App() {

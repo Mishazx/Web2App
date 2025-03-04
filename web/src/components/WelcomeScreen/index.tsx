@@ -15,30 +15,14 @@ const WelcomeScreen = () => {
   };
 
   return (
-    <div className="welcome-screen" style={{ 
-      width: 430, 
-      height: 932, 
-      background: "#000000",
-      display: "flex",
-      flexDirection: "column",
-      overflow: "hidden",
-      position: "relative",
-    }}>
+    <div className="welcome-screen" onClick={handleContinue}>
       <BackgroundImage />
       <GradientOverlay />
       
-      <div style={{
-        position: "absolute",
-        bottom: 0,
-        left: 0,
-        width: "100%",
-        zIndex: 3,
-        padding: "0 20px 40px 20px"
-      }}>
+      <div className="welcome-screen-content">
         <AwardBadge />
         <MainTitle />
         <SubTitle />
-        <ContinueButton handleClick={handleContinue} />
       </div>
     </div>
   );
